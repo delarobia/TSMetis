@@ -1,0 +1,23 @@
+{
+  "name": "metisnode",
+  "version": "0.0.1",
+  "description": "Utilisation de TS pour des pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delarobia/TSMetis.git"
+  },
+  "author": "Delarobia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delarobia/TSMetis/issues"
+  },
+  "homepage": "https://github.com/delarobia/TSMetis#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.4"
+  }
+}
