@@ -51,7 +51,7 @@
                                     <button class="btn btn-primary btn-lg" id="btn_sub_zorglub">Imposable ?</button>
                                 </div>
                                 <div class="col-12 col-lg-6 m-1">
-                                    <button class="btn btn-primary btn-lg" id="btn_rep_zorglub">Non Imposable</button>
+                                    <button class="btn btn-primary disabled btn-lg" id="btn_rep_zorglub">Non Imposable</button>
                                 </div>
                             </div>
                         </form>
@@ -85,7 +85,7 @@
                     <div class="row">
                         <div class="col-4 p-1">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="inputHeure" min="0" max="24">
+                                <input type="number" class="form-control" id="inputHeure" min="0" max="23">
                                 <label for="inputHeure" class="form-label">Heure</label>
                             </div>
                         </div>
@@ -100,6 +100,11 @@
                                 <input type="number" class="form-control" id="inputSecondes" min="0" max="59">
                                 <label for="inputSecondes" class="form-label">Secondes</label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <p>Dans une seconde il sera <span id="heuredansuneseconde"></span></p>
                         </div>
                     </div>
                 </div>

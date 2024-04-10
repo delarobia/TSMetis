@@ -1,7 +1,7 @@
 import { isNumber } from "../support.js";
 
 
-export default function zorglub() {
+export function zorglub() {
     let radiohomme = document.getElementById("radiosexehomme") as HTMLInputElement;
     let radiofemme = document.getElementById("radiosexefemme") as HTMLInputElement;
     let inputAge = document.getElementById("inputAge") as HTMLInputElement;
