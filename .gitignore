@@ -1,6 +1,7 @@
 # Dossiers
 node_modules/*
 src/js/*
+.vscode/*
 
 # Fichiers
 package-lock.json

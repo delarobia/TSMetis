@@ -1,10 +1,14 @@
-
+interface timecode{
+    heure: number,
+    minute: number,
+    seconde: number
+}
 export function ajoutUneSeconde() {
     let inputHeure = document.getElementById('inputHeure') as HTMLInputElement;
     let inputMinutes = document.getElementById('inputMinutes') as HTMLInputElement;
     let inputSecondes = document.getElementById('inputSecondes') as HTMLInputElement;
     let spAffichage = document.getElementById('heuredansuneseconde') as HTMLElement;
-    let oH = {heure: 0, minute: 0, seconde:0};
+    let oH:timecode = {heure: 0, minute: 0, seconde:0};
 
     let heures:number = 0;
     let minutes: number = 0;
@@ -14,19 +18,19 @@ export function ajoutUneSeconde() {
         e.preventDefault();
         heures = !isNaN(inputHeure.valueAsNumber) ? inputHeure.valueAsNumber : 24;
         oH = calculSeconde(heures, minutes, secondes);
-        spAffichage.textContent = `${oH.heure} heures, ${oH.minute} minutes et ${oH.seconde} secondes`
+        spAffichage.textContent = message(oH);
     }
     inputMinutes.onchange = function (e: Event) {
         e.preventDefault();
         minutes = !isNaN(inputMinutes.valueAsNumber) ? inputMinutes.valueAsNumber : 60;
         oH = calculSeconde(heures, minutes, secondes);
-        spAffichage.textContent = `${oH.heure} heures, ${oH.minute} minutes et ${oH.seconde} secondes`
+        spAffichage.textContent = message(oH);
     }
     inputSecondes.onchange = function (e: Event) {
         e.preventDefault();
         secondes = !isNaN(inputSecondes.valueAsNumber) ? inputSecondes.valueAsNumber : 60;
         oH = calculSeconde(heures, minutes, secondes);
-        spAffichage.textContent = `${oH.heure} heures, ${oH.minute} minutes et ${oH.seconde} secondes`
+        spAffichage.textContent = message(oH);
     }
 
     
@@ -46,4 +50,8 @@ function calculSeconde(h: number, m: number, s: number) {
         }
     }
     return { heure: h, minute: m, seconde: s };
+}
+
+function message(Oh:timecode):string{
+    return `${Oh.heure} heure${Oh.heure>1?'s':''}, ${Oh.minute} minute${Oh.minute>1?'s':''} et ${Oh.seconde} seconde${Oh.seconde>1?'s':''}`
 }
