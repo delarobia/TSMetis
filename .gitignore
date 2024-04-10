@@ -1,4 +1,8 @@
+# Dossiers
 node_modules/*
+src/js/*
+
+# Fichiers
 package-lock.json
 tailwind.config.js
 tsconfig.json
