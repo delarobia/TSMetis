@@ -19,5 +19,9 @@
   "devDependencies": {
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.4"
-  }
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "type": "module"
 }
