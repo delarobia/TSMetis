@@ -21,7 +21,8 @@
     "typescript": "^5.4.4"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "sass": "^1.74.1"
   },
   "type": "module"
 }

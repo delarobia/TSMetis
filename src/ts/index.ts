@@ -3,7 +3,10 @@
 import { zorglub } from "./exercices/zorglub.js"
 import { photocopier } from "./exercices/photocopies.js";
 import { ajoutUneSeconde } from "./exercices/heures.js";
+import { eventrendu } from "./exercices/rendu.js";
+ "./exercices/rendu.js";
 
 zorglub();
 photocopier();
 ajoutUneSeconde();
+eventrendu();
