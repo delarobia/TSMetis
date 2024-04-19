@@ -14,19 +14,19 @@ export function ajoutUneSeconde() {
     let minutes: number = 0;
     let secondes: number = 0;
 
-    inputHeure.onchange = function (e: Event) {
+    inputHeure.oninput = function (e: Event) {
         e.preventDefault();
         heures = !isNaN(inputHeure.valueAsNumber) ? inputHeure.valueAsNumber : 24;
         oH = calculSeconde(heures, minutes, secondes);
         spAffichage.textContent = message(oH);
     }
-    inputMinutes.onchange = function (e: Event) {
+    inputMinutes.oninput = function (e: Event) {
         e.preventDefault();
         minutes = !isNaN(inputMinutes.valueAsNumber) ? inputMinutes.valueAsNumber : 60;
         oH = calculSeconde(heures, minutes, secondes);
         spAffichage.textContent = message(oH);
     }
-    inputSecondes.onchange = function (e: Event) {
+    inputSecondes.oninput = function (e: Event) {
         e.preventDefault();
         secondes = !isNaN(inputSecondes.valueAsNumber) ? inputSecondes.valueAsNumber : 60;
         oH = calculSeconde(heures, minutes, secondes);

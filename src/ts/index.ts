@@ -5,9 +5,11 @@ import { photocopier } from "./exercices/photocopies.js";
 import { ajoutUneSeconde } from "./exercices/heures.js";
 import { eventrendu } from "./exercices/rendu.js";
 import { mail } from "./exercices/mail.js";
+import { assurance } from "./exercices/assurance.js";
 
 zorglub();
 photocopier();
 ajoutUneSeconde();
 eventrendu();
 mail();
+assurance();

@@ -23,7 +23,7 @@ function definirRendu() {
     ticket = cout_ticket.valueAsNumber;
     paiement_cl = paiement.valueAsNumber;
     if (!isNaN(ticket) && !isNaN(paiement_cl)) {
-        if (paiement_cl >= ticket) {
+        if (paiement_cl > ticket) {
             // Afficher et masquer les blocs
             erreurE.classList.add("d-none");
             blocrendu.classList.remove("d-none");
@@ -83,7 +83,7 @@ function definirRendu() {
             erreurRendu(`Votre ticket est réglé`, "bg-primary-subtle");
         } else {
             erreurRendu(
-                `Il manque ${(paiement_cl - ticket).toFixed(2)} €`,
+                `Il manque ${((paiement_cl - ticket) * -1).toFixed(2)} €`,
                 "bg-danger-subtle"
             );
         }
