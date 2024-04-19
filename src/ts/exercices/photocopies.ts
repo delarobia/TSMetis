@@ -2,7 +2,7 @@ export function photocopier() {
     let inputphotocop = document.getElementById('inputphotocop') as HTMLInputElement;
     let affichephotocop = document.getElementById('affichePrix') as HTMLInputElement;
 
-    inputphotocop.onchange = function (e) {
+    inputphotocop.oninput = function (e) {
         e.preventDefault();
         
         let photocopies = parseInt(inputphotocop.value);

@@ -1,198 +1,364 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style/main.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
+        <title>Rendu JS Procédural</title>
+    </head>
 
-    <title>Rendu JS Procédural</title>
-</head>
+    <body class="bg-dark-subtle">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Exercices de Javascript</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Zorglub -->
+                <div class="col-12 col-md-6 col-xxl-4 card bg-warning-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Centre d'imposition de Zorglub
+                        </h5>
+                        <div class="row">
+                            <form>
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="radioSexe"
+                                                id="radiosexehomme"
+                                                checked
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="radiosexehomme"
+                                                >Homme</label
+                                            >
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="radioSexe"
+                                                id="radiosexefemme"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="radiosexefemme"
+                                            >
+                                                Femme</label
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <div class="form-floating">
+                                            <input
+                                                type="number"
+                                                class="form-control"
+                                                id="inputAge"
+                                                min="0"
+                                                max="120"
+                                            />
+                                            <label
+                                                for="inputAge"
+                                                class="form-label"
+                                                >Age</label
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
 
-<body class="bg-dark-subtle">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Exercices de Javascript</h1>
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 m-1">
+                                        <button
+                                            class="btn btn-primary btn-lg"
+                                            id="btn_sub_zorglub"
+                                        >
+                                            Imposable ?
+                                        </button>
+                                    </div>
+                                    <div class="col-12 col-lg-6 m-1">
+                                        <button
+                                            class="btn btn-primary disabled btn-lg"
+                                            id="btn_rep_zorglub"
+                                        >
+                                            Non Imposable
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Photocopies -->
+                <div class="col-12 col-md-6 col-xxl-4 card bg-warning-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Repro Xpress</h5>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <div class="form-floating">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="inputphotocop"
+                                        min="0"
+                                        max="1000"
+                                    />
+                                    <label
+                                        for="inputphotocop"
+                                        class="form-label"
+                                        >Nombre de photocopies</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        disabled
+                                        class="form-control"
+                                        id="affichePrix"
+                                        min="0"
+                                        max="1000"
+                                    />
+                                    <label for="affichePrix" class="form-label"
+                                        >Cela vous coûtera</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Heure à la seconde d'après -->
+                <div class="col-12 col-md-6 col-xxl-4 card bg-warning-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Quelle heure sera-t-il ?</h5>
+                        <div class="row">
+                            <div class="col-4 p-1">
+                                <div class="form-floating">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="inputHeure"
+                                        min="0"
+                                        max="23"
+                                    />
+                                    <label for="inputHeure" class="form-label"
+                                        >Heures</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="form-floating">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="inputMinutes"
+                                        min="0"
+                                        max="59"
+                                    />
+                                    <label for="inputMinutes" class="form-label"
+                                        >Minutes</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="form-floating">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="inputSecondes"
+                                        min="0"
+                                        max="59"
+                                    />
+                                    <label
+                                        for="inputSecondes"
+                                        class="form-label"
+                                        >Secondes</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    Dans une seconde il sera
+                                    <span id="heuredansuneseconde"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rendu sur ticket de caisse -->
+                <div
+                    class="col-12 col-sm-12 col-md-6 col-xxl-4 card bg-warning-subtle"
+                >
+                    <div class="card-body">
+                        <h5 class="card-title">Rendu du ticket de caisse</h5>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <div class="form-floating">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="inputprixticket"
+                                        min="0"
+                                        max="1000"
+                                        step="1"
+                                    />
+                                    <label
+                                        for="inputprixticket"
+                                        class="form-label"
+                                        >Coût ticket</label
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <div class="form-floating">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="inputpaiement"
+                                        min="0"
+                                        max="1000"
+                                        step="1"
+                                    />
+                                    <label
+                                        for="inputpaiement"
+                                        class="form-label"
+                                        >Paiement client</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2 d-none" id="blocrendu">
+                            <div class="col-sm-12 pl-3 bg-transparent">
+                                <h5 class="card-title">
+                                    Rendu billets et pièces
+                                </h5>
+                                <div class="row align-items-center">
+                                    <div class="col-3">
+                                        <input
+                                            disabled
+                                            type="text"
+                                            class="form-control"
+                                            name="uneuro"
+                                            id="uneuro"
+                                        />
+                                    </div>
+                                    <div class="col-3">1 €</div>
+
+                                    <div class="col-3">
+                                        <input
+                                            disabled
+                                            type="text"
+                                            class="form-control"
+                                            name="deuxeuro"
+                                            id="deuxeuro"
+                                        />
+                                    </div>
+                                    <div class="col-3">2 €</div>
+
+                                    <div class="col-3">
+                                        <input
+                                            disabled
+                                            type="text"
+                                            class="form-control"
+                                            name="cinqeuro"
+                                            id="cinqeuro"
+                                        />
+                                    </div>
+                                    <div class="col-3">5 €</div>
+
+                                    <div class="col-3">
+                                        <input
+                                            disabled
+                                            type="text"
+                                            class="form-control"
+                                            name="dixeuro"
+                                            id="dixeuro"
+                                        />
+                                    </div>
+                                    <div class="col-3">10 €</div>
+
+                                    <div class="col-3">
+                                        <input
+                                            disabled
+                                            type="text"
+                                            class="form-control"
+                                            name="vingteuro"
+                                            id="vingteuro"
+                                        />
+                                    </div>
+                                    <div class="col-3">20 €</div>
+
+                                    <div class="col-3">
+                                        <input
+                                            disabled
+                                            type="text"
+                                            class="form-control"
+                                            name="cinquanteeuro"
+                                            id="cinquanteeuro"
+                                        />
+                                    </div>
+                                    <div class="col-3">50 €</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-none" id="erreurrendu">
+                            <div class="col card mt-2" id="couleurErreurRendu">
+                                <h6 class="card-title" id="texteErreurRendu">
+                                    Test
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xxl-4 card bg-success-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">Vérification de mails</h5>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="mailverif"
+                                        id="mailverif"
+                                    />
+                                    <label for="" class="form-label"
+                                        >Email</label
+                                    >
+                                    <small
+                                        id="textEmailVerif"
+                                        class="form-text text-muted d-none"
+                                        >Help text</small
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xxl-4 card bg-primary-subtle">
+                    <div class="card-body">
+                        <h5 class="card-title">------</h5>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <!-- Zorglub -->
-            <div class="col-12 col-md-6 col-xxl-4 card bg-warning-subtle">
-                <div class="card-body">
-                    <h5 class="card-title">Centre d'imposition de Zorglub</h5>
-                    <div class="row">
-                        <form>
-                            <div class="row">
-                                <div class="col-12 col-lg-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSexe"
-                                            id="radiosexehomme" checked>
-                                        <label class="form-check-label" for="radiosexehomme">Homme</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioSexe"
-                                            id="radiosexefemme">
-                                        <label class="form-check-label" for="radiosexefemme"> Femme</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-8">
-                                    <div class="form-floating">
-                                        <input type="number" class="form-control" id="inputAge" min="0" max="120">
-                                        <label for="inputAge" class="form-label">Age</label>
 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-lg-5 m-1">
-                                    <button class="btn btn-primary btn-lg" id="btn_sub_zorglub">Imposable ?</button>
-                                </div>
-                                <div class="col-12 col-lg-6 m-1">
-                                    <button class="btn btn-primary disabled btn-lg" id="btn_rep_zorglub">Non
-                                        Imposable</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Photocopies -->
-            <div class="col-12 col-md-6 col-xxl-4 card bg-warning-subtle">
-                <div class="card-body">
-                    <h5 class="card-title">Repro Xpress</h5>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="inputphotocop" min="0" max="1000">
-                                <label for="inputphotocop" class="form-label">Nombre de photocopies</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <div class="form-floating">
-                                <input type="text" disabled class="form-control" id="affichePrix" min="0" max="1000">
-                                <label for="affichePrix" class="form-label">Cela vous coûtera</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Heure à la seconde d'après -->
-            <div class="col-12 col-md-6 col-xxl-4 card bg-warning-subtle">
-                <div class="card-body">
-                    <h5 class="card-title">Quelle heure sera-t-il ?</h5>
-                    <div class="row">
-                        <div class="col-4 p-1">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="inputHeure" min="0" max="23">
-                                <label for="inputHeure" class="form-label">Heures</label>
-                            </div>
-                        </div>
-                        <div class="col-4 p-1">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="inputMinutes" min="0" max="59">
-                                <label for="inputMinutes" class="form-label">Minutes</label>
-                            </div>
-                        </div>
-                        <div class="col-4 p-1">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="inputSecondes" min="0" max="59">
-                                <label for="inputSecondes" class="form-label">Secondes</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 ">
-                            <p>Dans une seconde il sera <span id="heuredansuneseconde"></span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Rendu sur ticket de caisse -->
-            <div class="col-12 col-sm-12 col-md-6 col-xxl-4 card bg-warning-subtle">
-                <div class="card-body">
-                    <h5 class="card-title">Rendu du ticket de caisse</h5>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 ">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="inputprixticket" min="0" max="1000"
-                                    step="1">
-                                <label for="inputprixticket" class="form-label">Coût ticket</label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <div class="form-floating">
-                                <input type="number" class="form-control" id="inputpaiement" min="0" max="1000"
-                                    step="1">
-                                <label for="inputpaiement" class="form-label">Paiement client</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-2 d-none" id="blocrendu">
-                        <div class="col-sm-12 pl-3 bg-transparent ">
-                            <h5 class="card-title">Rendu billets et pièces</h5>
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <input disabled type="text" class="form-control" name="uneuro" id="uneuro">
-                                </div>
-                                <div class="col-3">1 €</div>
-
-                                <div class="col-3">
-                                    <input disabled type="text" class="form-control" name="deuxeuro" id="deuxeuro">
-                                </div>
-                                <div class="col-3">2 €</div>
-                                
-                                <div class="col-3">
-                                    <input disabled type="text" class="form-control" name="cinqeuro" id="cinqeuro">
-                                </div>
-                                <div class="col-3">5 €</div>
-
-                                <div class="col-3">
-                                    <input disabled type="text" class="form-control" name="dixeuro" id="dixeuro">
-                                </div>
-                                <div class="col-3">10 €</div>
-
-                                <div class="col-3">
-                                    <input disabled type="text" class="form-control" name="vingteuro" id="vingteuro">
-                                </div>
-                                <div class="col-3">20 €</div>
-
-                                <div class="col-3">
-                                    <input disabled type="text" class="form-control" name="cinquanteeuro" id="cinquanteeuro">
-                                </div>
-                                <div class="col-3">50 €</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row d-none" id="erreurrendu">
-                        <div class="col card mt-2" id="couleurErreurRendu">
-                            <h6 class="card-title" id="texteErreurRendu">Test</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-xxl-4 card bg-success-subtle">
-                <div class="card-body">
-                    <h5 class="card-title">------</h5>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-xxl-4 card bg-primary-subtle">
-                <div class="card-body">
-                    <h5 class="card-title">------</h5>
-                </div>
-            </div>
-
-            
-        </div>
-    </div>
-
-    <script type="module" src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
+        <script type="module" src="./js/index.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
