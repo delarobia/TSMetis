@@ -101,9 +101,10 @@ function calculPrime() {
   ) {
     if (inputAgeAssu.valueAsNumber < 18) {
       malus = -1;
-    } else if (inputAgeAssu.valueAsNumber < 25) {
-      malus += 1;
     } else {
+      if (inputAgeAssu.valueAsNumber < 25) {
+        malus += 1;
+      }
       if (inputPermisAssu.valueAsNumber < 2) {
         malus += 1;
       }
@@ -111,6 +112,7 @@ function calculPrime() {
       if (inputFidelAssu.valueAsNumber < 5) {
         malus += 1;
       }
+
     }
 
     switch (malus) {
