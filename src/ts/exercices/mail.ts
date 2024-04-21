@@ -1,6 +1,5 @@
 export function mail(){
     let mailVerif = document.getElementById('mailverif') as HTMLInputElement;
-    // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     mailVerif.oninput = function(){
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
